@@ -18,11 +18,14 @@
 		<script src="js/config.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-panels.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.custom.js"></script>
+    <script src="js/calculator.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
+    <link href="css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
 	</head>
 	<body class="homepage">
 
@@ -43,6 +46,39 @@
         <h1>Recall, from Patients.io, can automatically target patients who are overdue for an appointment.</h1>
       </div>
     </div>
+
+
+    <div id="calculator" class="container">
+      <div class="row">
+        <div class="6u theMoney">
+          Would you like to bill
+          <span class="data"><span class="extraMoney"></span> more <br/>every month?</span>
+          <span class="small">Play with the sliders to the right to see how increased recall could affect your business.</span>
+        </div>
+        <div class="6u">
+          If you have
+          <span class="data"><input type="text" id="numPatients" size="5" value="10000" class="right"/> patients</span>
+          <div id="patientSlider"></div>
+          and your average exam is billed at
+          <span class="data">$<input type="text" id="examFee" size="4" value="350" class="right"/> per exam</span>
+          <div id="examSlider"></div>
+          and your average patient currently comes back every
+          <span class="data"><input type="text" id="startFrequency" size="2" value="36" class="right"/> months</span>
+
+          <div id="startFrequencySlider"></div>
+          
+
+          by decreasing their average return to
+          <span class="data"><input type="text" id="endFrequency" size="2" value="32" class="right"/> months</span>
+          <div id="endFrequencySlider"></div>
+
+          You could bill an extra
+          <span class="data"><span class="extraMoney"></span> every month.</span>
+        </div>
+        
+      </div>
+    </div>
+
 		<!-- Banner Wrapper -->
 			<div id="banner-wrapper">
 				<div class="inner">
